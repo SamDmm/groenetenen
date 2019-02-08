@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
-public class IndexController {
+class IndexController {
 	private static final String VIEW = "index";
 	private String begroeting() {
 		int uur = LocalDateTime.now().getHour();
