@@ -20,6 +20,6 @@ class DefaultFiliaalService implements FiliaalService {
 
 	@Override
 	public List<Filiaal> findByPostcode(int van, int tot) {
-		return filiaalRepository.findByAdresPostcodeBetweenOderByAdresPostcode(van, tot);
+		return filiaalRepository.findByAdresPostcodeBetweenOrderByAdresPostcode(van, tot);
 	}
 }

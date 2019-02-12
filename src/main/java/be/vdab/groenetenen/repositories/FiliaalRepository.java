@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import be.vdab.groenetenen.entities.Filiaal;
 
 public interface FiliaalRepository extends JpaRepository<Filiaal, Long> {
-	List<Filiaal> findByAdresPostcodeBetweenOderByAdresPostcode(int van, int tot);
+	List<Filiaal> findByAdresPostcodeBetweenOrderByAdresPostcode(int van, int tot);
 }
