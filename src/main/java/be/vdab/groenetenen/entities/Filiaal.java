@@ -62,7 +62,7 @@ public class Filiaal implements Serializable {
 		this.inGebruikName = inGebruikName;
 		this.adres = adres;
 	}
-	protected Filiaal() {
+	public Filiaal() {
 	}
 
 	public long getId() {
