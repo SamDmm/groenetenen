@@ -1,15 +1,17 @@
 package be.vdab.groenetenen.web;
 
-import org.hibernate.validator.constraints.Range;
-
 import com.sun.istack.NotNull;
 
+import be.vdab.groenetenen.constraints.Postcode;
+import be.vdab.groenetenen.constraints.VanTotPostcodeFormVanKleinerDanOfGelijkAanTot;
+
+@VanTotPostcodeFormVanKleinerDanOfGelijkAanTot
 public class VanTotPostcodeForm {
 	@NotNull
-	@Range(min = 1000, max = 9999)
+	@Postcode
 	private Integer van;
 	@NotNull
-	@Range(min = 1000, max = 9999)
+	@Postcode
 	private Integer tot;
 	
 	public Integer getVan() {
