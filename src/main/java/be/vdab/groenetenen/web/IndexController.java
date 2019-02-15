@@ -14,12 +14,12 @@ class IndexController {
 	private String begroeting() {
 		int uur = LocalDateTime.now().getHour();
 		if (uur >= 6 && uur < 12) {
-			return "goede morgen";
+			return "goedemorgen";
 		}
 		if (uur >= 12 && uur < 18) {
-			return "goede middag";
+			return "goedemiddag";
 		}
-		return "goede middag";
+		return "goedemiddag";
 	}
 	@GetMapping
 	ModelAndView index() {

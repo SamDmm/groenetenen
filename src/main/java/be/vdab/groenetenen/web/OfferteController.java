@@ -34,10 +34,12 @@ class OfferteController {
 	String stap1NaarStap2(@Validated(Offerte.Stap1.class) Offerte offerte, BindingResult bindingResult) {
 		return bindingResult.hasErrors() ? STAP1_VIEW : STAP2_VIEW;
 	}
+	
 	@PostMapping(value = "toevoegen", params = "stap1")
 	String stap2NaarStap1(Offerte offerte) {
 		return STAP1_VIEW;
 	}
+	
 	private static final String REDIRECT_URL_NA_TOEVOEGEN  = "redirect:/";
 	@PostMapping(value = "toevoegen", params = "opslaan")
 	String create(@Validated(Offerte.Stap2.class) Offerte offerte, BindingResult bindingResult, SessionStatus sessionStatus) {
