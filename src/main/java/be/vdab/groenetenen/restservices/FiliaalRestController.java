@@ -90,4 +90,9 @@ class FiliaalRestController {
 	void update(@RequestBody @Valid Filiaal filiaal) {
 		filiaalService.update(filiaal);
 	}
+	
+	@GetMapping
+	FilialenResource findAll() {
+		return new FilialenResource(filiaalService.findAll(), entityLinks);
+	}
 }

@@ -23,6 +23,7 @@ class FiliaalResource extends ResourceSupport {
 	}
 	FiliaalResource(Filiaal filiaal, EntityLinks entityLinks) {
 		this.filiaal = filiaal;
+		this.add(entityLinks.linkToSingleResource(Filiaal.class, filiaal.getId()));
 		this.add(entityLinks.linkForSingleResource(Filiaal.class, filiaal.getId()).slash("werknemers").withRel("werknemers"));
 	}
 }
