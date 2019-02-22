@@ -5,10 +5,8 @@
 <nav th:replace='fragments::menu'></nav>
 <div th:if='${fout == null}'>
   <h1>
-    &euro;
-    <span th:text='${{euroDollar.euro}}'></span>
-    is $
-    <span th:text='${{euroDollar.dollar}}'></span>
+    &euro;<span th:text='${{euroDollar.euro}}'></span>
+    is $<span th:text='${{euroDollar.dollar}}'></span>
   </h1>
 </div>
 <div th:if='${fout != null}'>

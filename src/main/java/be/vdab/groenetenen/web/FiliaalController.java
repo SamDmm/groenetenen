@@ -20,6 +20,7 @@ import be.vdab.groenetenen.services.FiliaalService;
 @RequestMapping(path = "filialen", produces = MediaType.TEXT_HTML_VALUE)
 class FiliaalController {
 	private static final String VAN_TOT_POSTCODE_VIEW = "filialen/vantotpostcode";
+	private static final String PER_ID_VIEW = "filialen/perid";
 	private final FiliaalService filiaalService;
 	
 	FiliaalController(FiliaalService filiaalService) {
@@ -45,5 +46,9 @@ class FiliaalController {
 			return new ModelAndView(FILIAAL_VIEW).addObject(filiaal.get());
 		}
 		return new ModelAndView(REDIRECT_FILIAAL_NIET_GEVONDEN);
+	}
+	@GetMapping("perid")
+	String findById() {
+		return PER_ID_VIEW;
 	}
 }
