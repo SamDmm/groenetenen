@@ -1,6 +1,6 @@
 package be.vdab.groenetenen.web;
 
-import com.sun.istack.NotNull;
+import javax.validation.constraints.NotNull;
 
 import be.vdab.groenetenen.constraints.Postcode;
 import be.vdab.groenetenen.constraints.VanTotPostcodeFormVanKleinerDanOfGelijkAanTot;
