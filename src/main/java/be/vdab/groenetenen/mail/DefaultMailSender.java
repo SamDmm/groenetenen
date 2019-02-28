@@ -30,7 +30,7 @@ class DefaultMailSender implements MailSender {
 			helper.setTo(offerte.getEmailAdres());
 			helper.setSubject("Nieuwe offerte");
 			String offerteURL = offertesURL + offerte.getId();
-			helper.setText("Uw offerte heeft het nummer <strong>" + offerte.getId() + "</strong>. Je vindt de offerte <a href='" + offertesURL + "'>hier</a>.", true);
+			helper.setText("Uw offerte heeft het nummer <strong>" + offerte.getId() + "</strong>. Je vindt de offerte <a href='" + offerteURL + "'>hier</a>.", true);
 			sender.send(message);
 		} catch (MessagingException | MailException ex) {
 			LOGGER.error("Kan mail nieuwe offerte niet versturen", ex);
